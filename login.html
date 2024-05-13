@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,6 +7,14 @@
 
     <!-- STYLES -->
     <link rel="stylesheet" href="assets/CSS/styles.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
 
   <body>
@@ -36,6 +44,7 @@
               <label for="">
                 Email address
                 <input
+                  id="login"
                   type="email"
                   name="email"
                   class="login__input"
@@ -48,20 +57,32 @@
               <label for="">
                 Password
                 <input
+                  id="password"
                   type="password"
                   name="password"
                   class="login__input"
                   placeholder="Password"
                   required
                 />
+                <span class="show" id="btn_show"
+                  ><i class="fa-solid fa-eye"></i
+                ></span>
               </label>
 
-              <button type="submit" class="login__button">Entrar</button>
+              <button
+                type="submit"
+                class="login__button"
+                onclick="loginUser(); return false;"
+              >
+                Entrar
+              </button>
             </form>
             <a href="#" class="register">Cadastre-se</a>
           </div>
         </div>
       </section>
     </main>
+
+    <script src="./assets/scripts/index.js"></script>
   </body>
 </html>
