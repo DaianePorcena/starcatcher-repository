@@ -11,7 +11,7 @@
     --white-color: #FFF;
     --primary-color: #020228;
     --secondary-color: #F5F5F5;
-    --tertiary-color: #00aa00;
+    --tertiary-color: linear-gradient(135deg, #00aa00, #008800);
     --font-primary-color: #1E1E1E;
     --font-secondary-color: #9D9D9D;
 }
@@ -95,10 +95,23 @@ main{
 }
 
 label{
+    position: relative;
     font-size: 14px;
     font-weight: 500;
     color: var(--font-primary-color);
     text-align: left;
+}
+
+.show{
+    color: var(--font-primary-color);
+    position: absolute;
+    font-size: 14px;
+    line-height: 14px;
+    top: 70%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: none;
 }
 
 .login__input{
@@ -114,6 +127,7 @@ label{
     border-color: var(--primary-color);
 }
 
+
 .login__button{
     background-color: var(--primary-color);
     color: var(--white-color);
@@ -123,6 +137,10 @@ label{
     font-weight: 500;
     padding: 10px;
     margin-top: 5px;
+}
+
+.login__button:hover{
+    background: var(--tertiary-color)
 }
 
 a{
