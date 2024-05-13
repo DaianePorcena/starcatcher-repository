@@ -1,42 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Starcatcher Portfólio</title>
 
     <!-- STYLES -->
-    <link rel="stylesheet" href="assets/CSS/styles.css">
-</head>
+    <link rel="stylesheet" href="assets/CSS/styles.css" />
+  </head>
 
-<body>
+  <body>
     <main>
-        
-        <section class="login">
-            <div class="login__container">
-                <div class="login__image">
-                    <img src="./assets/images/img-login.png" alt="starcatcher">
-                </div> 
+      <section class="login">
+        <div class="login__container">
+          <div class="login__image">
+            <img src="./assets/images/img-login.png" alt="starcatcher" />
+          </div>
 
-                <div class="form__container">
-                    <h1 class="login__title">Acessar o Starcatcher Portfólio</h1>
-                    <button class="login__button-google"><img src="./assets/images/icon-google.svg" alt="login com o google"> Entrar com o Google</button>
-                    <div class="login__items">
-                        <div class="left__line"></div>
-                        <span class="item__text">ou</span>
-                        <div class="right__line"></div>
-                    </div>
-                    <form action="" method="" class="login__form">
-                        <input type="text" name="username" class="login__input" placeholder="Email address" required>
-                        <input type="password" name="password" class="login__input" placeholder="Password"  required>
-                        <button type="submit" class="login__button">Entrar</button>
-                    </form>
-                    <a href="#" class="register">Cadastre-se</a>
-                </div>
+          <div class="form__container">
+            <h1 class="login__title">Acessar o Starcatcher Portfólio</h1>
+            <button class="login__button-google">
+              <img
+                class="google__icon"
+                src="./assets/images/icon-google.svg"
+                alt="login com o google"
+              />
+              Entrar com o Google
+            </button>
+            <div class="login__items">
+              <div class="left__line"></div>
+              <span class="item__text">ou</span>
+              <div class="right__line"></div>
             </div>
-        </section>
-    </main>
-</body>
+            <form action="" method="" class="login__form">
+              <label for="">
+                Email address
+                <input
+                  type="email"
+                  name="email"
+                  class="login__input"
+                  placeholder="your@email.com"
+                  autocomplete="username"
+                  required
+                />
+              </label>
 
+              <label for="">
+                Password
+                <input
+                  type="password"
+                  name="password"
+                  class="login__input"
+                  placeholder="Password"
+                  required
+                />
+              </label>
+
+              <button type="submit" class="login__button">Entrar</button>
+            </form>
+            <a href="#" class="register">Cadastre-se</a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
