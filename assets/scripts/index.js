@@ -1,12 +1,32 @@
 let loginInput;
 let passwordInput;
 let showPasswordButton;
+let element;
+const text = '<Acessar o Starcatcher Portfólio/>';
+const delay = 200;
 
 function init() {
     loginInput = document.getElementById('login');
     passwordInput = document.getElementById('password');
     showPasswordButton = document.getElementById('btn_show');
+
+    element = document.getElementById('title');
 }
+
+function showText(element, text, delay) {
+    const char = text.split('').reverse();
+
+    const typer = setInterval(() => {
+        if(!char.length){
+            return clearInterval(typer);
+        }
+
+        const next = char.pop();
+
+        element.innerHTML += next;
+    }, delay)
+}
+
 
 // Validar campos
 function validarCampos(login, password) {
@@ -68,4 +88,5 @@ function toggle() {
 window.onload = function () {
     init();
     passwordInput.addEventListener('input', showPassword);
+    showText(element, text, delay);
 };
